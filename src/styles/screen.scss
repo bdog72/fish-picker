@@ -1,22 +1,3 @@
-@import 'utility';
-
-// $base-text-size: 16px;
-// $base-font-family: sans-serif;
-//
-// html {
-//   @include full-height;
-// }
-//
-// body {
-//   margin: 0;
-//   font: $base-text-size / 1 $base-font-family;
-// }
-//
-// .square {
-//   border: 1px solid black;
-//   height: 100px;
-//   width: 100px;
-// }
 
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
@@ -34,10 +15,14 @@ ul {
   display: table;
 }
 
-// .board {
-//   display: flex;
-//   text-align: center;
-// }
+.winOrLose {
+  font-size: 50px;
+  color: red;
+}
+
+.list a {
+  font-size: 30px;
+}
 
 .status {
   margin-bottom: 10px;
