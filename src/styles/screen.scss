@@ -23,10 +23,6 @@ body {
   margin: 20px;
 }
 
-h1 {
-  color: red;
-}
-
 ol,
 ul {
   padding-left: 30px;
@@ -38,8 +34,15 @@ ul {
   display: table;
 }
 
+// .board {
+//   display: flex;
+//   text-align: center;
+// }
+
 .status {
   margin-bottom: 10px;
+  font-size: 35px;
+  color: red;
 }
 
 .square {
