@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import TicTacToe2 from './TicTacToe2'
 
 function Square (props) {
   return (
@@ -98,7 +99,7 @@ class App extends Component {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O')
     }
 
-    return (
+    return <div>
       <div className='game'>
         <div className='game-board'>
           <Board
@@ -111,7 +112,8 @@ class App extends Component {
           <ol>{moves}</ol>
         </div>
       </div>
-    )
+      <TicTacToe2 />
+    </div>
   }
 }
 
