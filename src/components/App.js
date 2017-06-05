@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import App1 from './App1'
 import { calculateWinner } from './helper'
 function Square (props) {
   return (
@@ -74,7 +75,7 @@ export default class App extends Component {
   jumpTo (step) {
     this.setState({
       stepNumber: step,
-      xIsNext: !((step % 2))
+      xIsNext: !(step % 2)
     })
   }
 
@@ -96,23 +97,26 @@ export default class App extends Component {
 
     let status
     if (winner) {
-      status = 'winner: ' + winner
+      status = 'Winner: ' + winner
     } else {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O')
     }
 
     return (
-      <div className='game'>
-        <div className='game-board'>
-          <Board
-            squares={current.squares}
-            onClick={(i) => this.handleClick(i)}
+      <div>
+        <div className='game'>
+          <div className='game-board'>
+            <Board
+              squares={current.squares}
+              onClick={(i) => this.handleClick(i)}
           />
+          </div>
+          <div className='game-info'>
+            <div className='status'>{status}</div>
+            <ol className='moves'>{moves}</ol>
+          </div>
         </div>
-        <div className='game-info'>
-          <div>{status}</div>
-          <ol>{moves}</ol>
-        </div>
+        <App1 />
       </div>
     )
   }

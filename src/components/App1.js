@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TicTacToe2 from './TicTacToe2'
+// import TicTacToe2 from './TicTacToe2'
 
 function Square (props) {
   return (
@@ -75,7 +75,7 @@ class App1 extends Component {
   jumpTo (step) {
     this.setState({
       stepNumber: step,
-      xIsNext: !((step % 2))
+      xIsNext: !(step % 2)
     })
   }
 
@@ -103,7 +103,7 @@ class App1 extends Component {
     }
 
     return <div>
-      <TicTacToe2 />
+      {/* <TicTacToe2 /> */}
       <div className='game'>
         <div className='game-board'>
           <Board
@@ -112,15 +112,15 @@ class App1 extends Component {
           />
         </div>
         <div className='game-info'>
-          <div>{status}</div>
-          <ol>{moves}</ol>
+          <div className='status'>{status}</div>
+          <ol className='moves'>{moves}</ol>
         </div>
       </div>
     </div>
   }
 }
 
-export default App
+export default App1
 
 function calculateWinner (squares) {
   const lines = [
